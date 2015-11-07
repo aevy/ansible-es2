@@ -1,3 +1,6 @@
 ---
 es2_jvm_install: yes
 es2_elasticsearch_install: yes
+es2_elasticsearch_yml_ext: {}
+es2_elasticsearch_yml_group_ext: {}
+es2_elasticsearch_yml_host_ext: {}

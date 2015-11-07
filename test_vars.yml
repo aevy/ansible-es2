@@ -1,0 +1,6 @@
+es2_heap_size: "128m"
+es2_elasticsearch_yml_ext:
+  cluster:
+    name: "test"
+  node:
+    name: "${HOSTNAME}"
