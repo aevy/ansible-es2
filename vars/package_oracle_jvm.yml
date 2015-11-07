@@ -1,0 +1,2 @@
+es2_jvm_apt_repo: 'ppa:webupd8team/java'
+es2_oracle_jvm_accept_terms: yes

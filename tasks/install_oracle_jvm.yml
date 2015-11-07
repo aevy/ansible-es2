@@ -1,0 +1,32 @@
+---
+# Credit to @malk on Github
+# https://github.com/malk/ansible-java8-oracle/blob/master/tasks/main.yml
+#
+- include_vars: "package_oracle_jvm.yml"
+- name: Install add-apt-repostory
+  apt:
+    name: software-properties-common
+    state: latest
+  tags: [es2-oracle-jvm]
+
+- name: Add Oracle Java Repository
+  apt_repository:
+    repo: "{{es2_jvm_apt_repo}}"
+    state: present
+  tags: [es2-oracle-jvm]
+
+- name: Accept Java 8 Licence
+  shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | tee /etc/oracle-java-8-licence-acceptance | /usr/bin/debconf-set-selections
+  args:
+    creates: /etc/oracle-java-8-licence-acceptance
+  when: es2_oracle_jvm_accept_terms
+  tags: [es2-oracle-jvm]
+- name: Install Oracle Java 8
+  apt:
+    name: "{{item}}"
+    state: latest
+  with_items:
+    - oracle-java8-installer
+    - ca-certificates
+    - oracle-java8-set-default
+  tags: [es2-oracle-jvm]

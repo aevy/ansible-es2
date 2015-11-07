@@ -1,0 +1,3 @@
+es2_apt_key_server: pgp.mit.edu
+es2_apt_key_id: "D88E42B4"
+es2_apt_repo: "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main"

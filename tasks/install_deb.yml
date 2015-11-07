@@ -1,0 +1,16 @@
+- include_vars: "package_deb.yml"
+- name: "Add Elasticsearch key to apt"
+  apt_key:
+    key_server: "{{es2_apt_key_server}}"
+    id: "{{es2_apt_key_id}}"
+    state: present
+  tags:
+    es2-package
+    es2-pki
+- name: "Add Elasticsearch 2.0 apt repo"
+  apt_repository:
+    repo: "{{es_apt_repo}}"
+    state: present
+    update_cache: yes
+  tags:
+    es2-package

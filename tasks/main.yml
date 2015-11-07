@@ -1,2 +1,5 @@
 ---
-# tasks file for .
+- include: install_oracle_jvm.yml
+  when: es2_jvm_install
+- include: install_deb.yml
+  when: es2_elasticsearch_install

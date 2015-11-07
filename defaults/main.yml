@@ -1,2 +1,3 @@
 ---
-# defaults file for .
+es2_jvm_install: yes
+es2_elasticsearch_install: yes
