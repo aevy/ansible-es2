@@ -1,5 +1,7 @@
 - include_vars: "default_env_config.yml"
+  tags: [es2-configure, es2-configure-defaults]
 - include_vars: "main_config.yml"
+  tags: [es2-configure, es2-configure-main]
 - name: "Configure /etc/defaults/elasticsearch"
   template:
     dest: "/etc/default/elasticsearch"
