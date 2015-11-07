@@ -1,5 +1,7 @@
-Role Name
+ansible-es2 - ElasticSearch 2.0 role for Ansible
 =========
+
+This is a work in progress.
 
 A brief description of the role goes here.
 
