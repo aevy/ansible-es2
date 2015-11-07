@@ -1,2 +1,0 @@
-es2_env_defaults:
-  ES_HEAP_SIZE: "{{es2_heap_size}}"
