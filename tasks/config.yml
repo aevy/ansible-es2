@@ -1,12 +1,6 @@
 - include_vars: "default_env_config.yml"
   tags: [es2-configure, es2-configure-defaults]
-- name: "Configure /etc/defaults/elasticsearch"
-  template:
-    dest: "/etc/default/elasticsearch"
-    src: "defaults_elasticsearch.j2"
-    backup: yes
-  tags: [es2-configure, es2-configure-defaults]
-- name: "Configure /etc/defaults/elasticsearch"
+- name: "Configure /etc/default/elasticsearch"
   template:
     dest: "/etc/default/elasticsearch"
     src: "defaults_elasticsearch.j2"
