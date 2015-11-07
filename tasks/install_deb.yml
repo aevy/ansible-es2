@@ -5,12 +5,19 @@
     id: "{{es2_apt_key_id}}"
     state: present
   tags:
-    es2-package
-    es2-pki
+    - es2-package
+    - es2-pki
 - name: "Add Elasticsearch 2.0 apt repo"
   apt_repository:
-    repo: "{{es_apt_repo}}"
+    repo: "{{es2_apt_repo}}"
     state: present
     update_cache: yes
   tags:
-    es2-package
+    - es2-package
+- name: "Install Elasticsearch"
+  apt:
+    package: "elasticsearch"
+    state: present
+  tags:
+    - es2-package
+    - es2-install

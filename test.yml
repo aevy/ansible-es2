@@ -1,4 +1,7 @@
 - hosts: all
+  become: yes
+  vars:
+    es2_heap_size: "128m"
   tasks:
     - include: "tasks/main.yml"
   handlers:
