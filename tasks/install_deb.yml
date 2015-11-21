@@ -17,7 +17,8 @@
 - name: "Install Elasticsearch"
   apt:
     package: "elasticsearch"
-    state: present
+    state: latest
+    upgrade: full
   tags:
     - es2-package
     - es2-install
