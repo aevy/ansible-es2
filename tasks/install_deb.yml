@@ -18,7 +18,6 @@
   apt:
     package: "elasticsearch"
     state: latest
-    upgrade: full
   tags:
     - es2-package
     - es2-install
