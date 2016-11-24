@@ -1,0 +1,7 @@
+- name: "Install elasticsearch scripts"
+  copy:
+    src: "{{ item }}"
+    dest: /etc/elasticsearch/scripts/
+  with_fileglob:
+    - files/elasticsearch/scripts/*
+  tags: [es2-scripts]
