@@ -4,6 +4,7 @@
 - include: install_deb.yml
   when: es2_elasticsearch_install
 - include: config.yml
+- include: scripts.yml
 - service:
     name: "elasticsearch"
     state: started
